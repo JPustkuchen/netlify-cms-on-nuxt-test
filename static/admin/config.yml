@@ -76,3 +76,16 @@ collections:
           summary: '{{fields.image}}',
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
+  - name: 'myjoboffer'
+    label: 'Stellenangebote Test'
+    folder: 'content/jobs'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    editor:
+       preview: true
+    fields:
+      - { label: 'Stellenbezeichnung', name: 'title', widget: 'string', required: true }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: false, allow_multiple: false }
+      - { label: 'Stellenbeschreibung', name: 'body', widget: 'markdown', required: true }
+      - { label: 'PDF', name: 'pdf', widget: 'file', required: false }
